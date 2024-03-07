@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Input from "./component/Input";
 
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -27,31 +28,40 @@ const App = () => {
     setCity(event.target.value);
   };
 
+ 
+
+
   return (
-    <div className="bg-gray-400 flex justify-center items-center h-screen ">
-      {" "}
-      <div className="bg-gradient-to-br from-sky-700 w-96 h-1/2 uppercase rounded-lg p-5 shadow-lg shadow-white inset-16 ">
-        <div className=" flex flex-col">
-          <input className="py-4 rounded-md px-2 outline-none uppercase font-semibold"
-            type="text"
-            value={city}
-            onChange={handleChange}
-            placeholder="Enter city name"
-          />
-          <button  className="my-3 text-white bg-gray-600 mx-auto px-3 py-2 rounded-lg"   onClick={fetchWeather}>Get Weather</button>
-          {weatherData && (
-            <div>
-              <h3>{weatherData.name}</h3>
+
+<>
+<div className="w-screen bg-gray-900 h-screen flex justify-center items-center">
+
+  <div className="h-96 w-96 shadow-sm rounded-2xl  shadow-gray-300 inset-10">
+     <Input 
+     handleChange={handleChange}
+     city={city}
+     fetchWeather={fetchWeather}
+     
+     />
+     { !weatherData &&
+  <div  className=" w-full flex items-center px-8 py-12"><div className="h-12 w-12  animate-spin rounded-full border-t-2 border-white  "></div> </div>
+}
+{weatherData && (
+            <div className="text-white w-full flex items-center px-8 py-12">
+             <div>
+             <h3>{weatherData.name}</h3>
               <p>Temperature: {Math.round(weatherData.main.temp - 273.15)}°C</p>
               <p>Description: {weatherData.weather[0].main}</p>
               <p> max-temp:{Math.round(weatherData.main.temp_max - 273.15)}°C</p>
               <p> humedity: {weatherData.main.humidity} </p>
   
+             </div>
             </div>
           )}
-        </div>
-      </div>
-    </div>
-  );
+  </div>
+</div>
+
+</>
+   );
 };
 export default App;
