@@ -7,13 +7,17 @@ const mockData =
       "imageUrl": "https://images.unsplash.com/photo-1601297183305-6df142704ea2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
+      "weather": "Scattered Clouds",
+      "imageUrl": "https://images.unsplash.com/photo-1465156799763-2c087c332922?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
       "weather": "Few Clouds",
       "imageUrl": "https://images.unsplash.com/photo-1465156799763-2c087c332922?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
 
     {
       "weather": "overcast clouds",
-      "imageUrl": "https://images.unsplash.com/photo-1642447733831-2cdd9f5efae7?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageUrl": "https://images.unsplash.com/photo-1668095618867-cbf501ea4d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3ZlcmNhc3QlMjBjbG91ZHxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
       "weather": "Broken Clouds",
