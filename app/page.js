@@ -26,7 +26,7 @@ const App = () => {
       console.log(response.data);
       const weatherCondition = response.data.weather[0].description;
       const matchedData = mockData.find(
-        (data) => data.weather.toLowerCase() === weatherCondition.toLowerCase()
+        (data) => data.weather.toLowerCase().replace(/\s/g, '') === weatherCondition.toLowerCase().replace(/\s/g, '')
       );
       setBgImage(matchedData?.imageUrl || "");
     } catch (error) {
